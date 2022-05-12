@@ -35,8 +35,6 @@
 					"script": {
 						"exec": [
 							"let jsonData = pm.response.json();\r",
-							"var reqBody = JSON.parse(pm.request.body.raw);\r",
-							"console.log(reqBody)\r",
 							"\r",
 							"let user_name = jsonData.name;\r",
 							"\r",
@@ -53,7 +51,30 @@
 							"\r",
 							"pm.test(\"Check salary\", function () {\r",
 							"    pm.expect(user_salary).to.eql(500);\r",
-							"});"
+							"});\r",
+							"\r",
+							"let requestData = request.data;\r",
+							"\r",
+							"pm.test(\"Check request name\", function () {\r",
+							"    pm.expect(requestData.name).to.eql(user_name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check request age\", function () {\r",
+							"    pm.expect(+requestData.age).to.eql(user_age);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check request salary\", function () {\r",
+							"    pm.expect(+requestData.salary).to.eql(user_salary);\r",
+							"});\r",
+							"\r",
+							"console.log(jsonData.family)\r",
+							"\r",
+							"let user_salary_1_5 = jsonData.family.u_salary_1_5_year;\r",
+							"\r",
+							"pm.test(\"Check request 1_5_year_salary\", function () {\r",
+							"    pm.expect(+requestData.salary*4).to.eql(user_salary_1_5);\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript"
 					}
