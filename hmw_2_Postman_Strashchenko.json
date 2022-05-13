@@ -354,9 +354,11 @@
 							"pm.test(\"Check u_salary_5_years\", function () {\r",
 							"    pm.expect(+responceData.person.u_salary_5_years).to.eql(+requestData.salary*4.2);\r",
 							"});\r",
+							"\r",
 							"console.log(responceData.person)\r",
-							"for (i=0; i<responceData.person.length; i++){\r",
-							"    console.log(\"Элемент из списка salary № \" + i +\" = \"+ responceData.person[i])\r",
+							"\r",
+							"for (let prop in responceData.person) {\r",
+							"  console.log(\"responceData.person.\" + prop + \" = \" + responceData.person[prop]);\r",
 							"}"
 						],
 						"type": "text/javascript"
