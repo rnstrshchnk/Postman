@@ -7,19 +7,22 @@
 	"item": [
 		{
 			"name": "first",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
 				"url": {
-					"raw": "http://162.55.220.72:5005/first",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/first",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"first"
 					]
@@ -103,31 +106,27 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Arina",
+							"value": "{{name}}",
 							"type": "text"
 						},
 						{
 							"key": "age",
-							"value": "22",
+							"value": "{{age}}",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "500",
+							"value": "{{salary}}",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:5005/user_info_3",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/user_info_3",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"user_info_3"
 					]
@@ -209,30 +208,26 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_3?name=Arina&age=22&salary=300",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/object_info_3?name={{name}}&age={{age}}&salary={{salary}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"object_info_3"
 					],
 					"query": [
 						{
 							"key": "name",
-							"value": "Arina"
+							"value": "{{name}}"
 						},
 						{
 							"key": "age",
-							"value": "22"
+							"value": "{{age}}"
 						},
 						{
 							"key": "salary",
-							"value": "300"
+							"value": "{{salary}}"
 						}
 					]
 				}
@@ -311,15 +306,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_4?name={{name}}&age={{age}}&salary={{salary}}",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/object_info_4?name={{name}}&age={{age}}&salary={{salary}}",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"object_info_4"
 					],
@@ -463,15 +454,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:5005/user_info_2",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/user_info_2",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"user_info_2"
 					]
